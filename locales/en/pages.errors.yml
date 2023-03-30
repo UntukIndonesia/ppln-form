@@ -1,0 +1,20 @@
+unknownError:
+  title: Something went wrong
+  content:
+    - An unknown error occured. Please try again.
+    - If this error still happens, you can contact us with the problem you are having.
+    - <a href="https://indonesia.nl">Return to Indonesia.nl</a>
+
+pageNotFound:
+  title: Page not found
+  content:
+    - The page you are trying to access was not found.
+      If you entered the web address manually, check to see if it is correct.
+    - <a href="https://indonesia.nl">Return to Indonesia.nl</a>
+
+sessionEnded:
+  title: Session expired
+  content:
+    - For security reasons, your session expires automatically if you have not
+      made any actions for 15 minutes.
+    - Please <a href="/">try again</a> from the beginning.

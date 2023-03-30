@@ -1,0 +1,50 @@
+{
+  "name": "kbridh-public-service-app-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "npm run build:sass && npm run build:js",
+    "build:sass": "mkdir -p public/stylesheets; node-sass assets/scss/app.scss --output-style compressed public/stylesheets/application.css",
+    "build:dev:js": "webpack --config ./webpack.config.development.js",
+    "build:js": "webpack --config ./webpack.config.production.js",
+    "watch:sass": "nodemon --watch ./ -e scss,sass --exec npm run build:sass",
+    "watch:js": "webpack watch --config ./webpack.config.development.js",
+    "start": "node index.js",
+    "dev": "concurrently -n \"scss,js,node\" -c \"blue,magenta,cyan\" -k \"npm run watch:sass\" \"npm run watch:js\" \"nodemon --watch ./ ./index.js\"",
+    "lint": "eslint ."
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@kbridenhaag/kbridh-app": "^2.4.1",
+    "babel-loader": "^9.1.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "govuk-frontend": "^4.3.1",
+    "hmpo-components": "^5.4.0",
+    "hmpo-config": "^2.2.1",
+    "hmpo-form-wizard": "^12.0.6",
+    "hmpo-i18n": "^5.0.2",
+    "hmpo-logger": "^6.1.1",
+    "node-sass": "^7.0.1",
+    "nunjucks": "^3.2.3",
+    "uglify-js": "^3.17.0",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-jest": "^27.0.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.0.2",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.8.4"
+  }
+}

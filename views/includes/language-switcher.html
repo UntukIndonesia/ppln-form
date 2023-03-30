@@ -1,0 +1,29 @@
+<div class="app-language-switcher" aria-label="Change language">
+    <ul class="app-language-switcher__list">
+      {% if lang == "en" %}
+        <li class="app-language-switcher__list-item">
+          <span>
+            <a href="?lang=id" hreflang="en" lang="en" rel="alternate" class="govuk-link govuk-link--no-visited-state">Bahasa Indonesia</a>
+          </span>
+        </li>
+        <li aria-current="true" class="app-language-switcher__list-item">
+          <span>
+            English 
+          </span>
+        </li>
+      {% endif %}
+
+      {% if lang == "id" %}
+        <li class="app-language-switcher__list-item">
+          <span>
+            Bahasa Indonesia
+          </span>
+        </li>
+        <li aria-current="true" class="app-language-switcher__list-item">
+          <span>
+            <a href="?lang=en" hreflang="en" lang="en" rel="alternate" class="govuk-link govuk-link--no-visited-state">English</a>
+          </span>
+        </li>
+      {% endif %}
+    </ul>
+</div>

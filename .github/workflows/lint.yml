@@ -1,0 +1,24 @@
+name: Lint
+
+on: 
+  - pull_request
+
+jobs:
+  run-eslint:
+    name: Run linter
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Run eslint
+        run: npm run lint

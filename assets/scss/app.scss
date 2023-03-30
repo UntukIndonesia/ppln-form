@@ -1,0 +1,32 @@
+$govuk-assets-path: "/public/";
+$govuk-font-family: "Plus Jakarta Sans", "Arial", sans-serif;
+$govuk-brand-colour: #31708f;
+$govuk-global-styles: true;
+
+@import "node_modules/govuk-frontend/govuk/base";
+
+@at-root {
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+      govuk-font-url("PlusJakartaSans-Medium.woff2") format("woff2"),
+      govuk-font-url("PlusJakartaSans-Medium.woff") format("woff");
+    font-display: fallback;
+  }
+
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: bold;
+    src:
+      govuk-font-url("PlusJakartaSans-ExtraBold.woff2") format("woff2"),
+      govuk-font-url("PlusJakartaSans-ExtraBold.woff2") format("woff");
+    font-display: fallback;
+  }
+}
+
+@import "node_modules/govuk-frontend/govuk/all";
+@import "node_modules/hmpo-components/all";
+@import "./components/all";

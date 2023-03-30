@@ -1,0 +1,42 @@
+.app-header {
+  padding: govuk-spacing(2) 0;
+  @include govuk-typography-common;
+  margin-bottom: 0;
+  position: relative;
+  border-bottom: govuk-spacing(2) solid $govuk-brand-colour;
+
+  @include govuk-media-query($from: desktop) {
+    padding: govuk-spacing(4) 0;
+  }
+}
+
+.app-header__title {
+  display: inline-flex;
+  align-items: center;
+}
+
+.app-header__crest {
+  margin-right: govuk-spacing(4);
+  width: 66px;
+}
+
+.app-header__title-text {
+  @include govuk-font(19, bold);
+}
+
+.app-header__service-name {
+  margin-top: govuk-spacing(1);
+}
+
+.app-header__link {
+  @include govuk-link-style-text;
+  @include govuk-link-style-no-underline;
+}
+
+.app-header__link:hover {
+  text-decoration: none;
+}
+
+.app-header__link:focus {
+  @include govuk-focused-text;
+}

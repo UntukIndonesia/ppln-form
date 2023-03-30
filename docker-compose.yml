@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  redis:
+    container_name: kbridh-app-redis
+    image: redis:alpine
+    volumes:
+      - kbridh-app-redis:/data
+    ports:
+      - "6379:6379"
+  redis-commander:
+    container_name: kbridh-app-redis-commander
+    image: rediscommander/redis-commander:latest
+    environment:
+    - REDIS_HOSTS=local:redis:6379
+    ports:
+    - "8081:8081"
+  wiremock:
+    container_name: kbridh-app-wiremock
+    image: wiremock/wiremock
+    volumes:
+      - $PWD/wiremock:/home/wiremock
+    ports:
+      - "8080:8080"
+volumes:
+  kbridh-app-redis:

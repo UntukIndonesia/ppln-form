@@ -1,0 +1,47 @@
+{
+  "env": {
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/recommended"],
+      "globals": {
+        "commonjs": true,
+        "node": true,
+        "jest": true
+      },
+      "rules": {
+        "jest/no-done-callback": "off"
+      }
+    },
+    {
+      "files": ["assets/**/*.js"],
+      "globals": {
+        "window": true
+      },
+      "parserOptions": {
+        "sourceType": "module"
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "jest/no-done-callback": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "semi": true
+      }
+    ]
+  },
+  "ignorePatterns": ["public/**/*.js"]
+}

@@ -1,0 +1,14 @@
+buttons:
+  next: Lanjut
+govuk:
+  serviceName: Service name
+  backLink: Kembali
+  errorSummaryTitle: Mohon periksa jawaban Anda
+  error: Error
+  warning: Peringatan
+  skipLink: Langsung ke konten utama
+  statusCode: Kode status
+  cookieBanner: Layanan ini mengunakan cookies untuk berfungsi
+kbridh:
+  embassy: Kedutaan Besar Republik Indonesia
+  embassyLocation: Den Haag, Belanda

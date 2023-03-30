@@ -1,0 +1,33 @@
+.app-language-switcher {
+  @include govuk-responsive-padding(2, "top");
+  @include govuk-responsive-padding(2, "bottom");
+  @include govuk-clearfix();
+}
+
+.app-language-switcher__list {
+  @include govuk-font(16);
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+}
+
+.app-language-switcher__list-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    &:after {
+      content: "";
+      display: inline-block;
+      position: relative;
+      top: 0.1875em;
+      height: 1em;
+      border-right: 0.09375em solid #0b0c0c;
+    }
+  }
+
+  & > * {
+    padding: govuk-spacing(1);
+  }
+}

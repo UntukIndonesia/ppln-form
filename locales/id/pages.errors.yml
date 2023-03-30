@@ -1,0 +1,18 @@
+unknownError:
+  title: Ada kesalahan teknis
+  content:
+    - Karena kesalahan yang tidak diketahui, kami tidak dapat memproses permintaan Anda.
+    - Mohon mulai dari awal dan/atau hubungi kami dengan kesalahan yang Anda temukan.
+    - <a href="https://indonesia.nl">Kembali to Indonesia.nl</a>
+
+pageNotFound:
+  title: Halaman yang anda cari tidak ditemukan
+  content:
+    - Alamat yang anda masukkan salah, tidak tersedia, atau sudah dihapus.
+    - <a href="https://indonesia.nl">Kembali ke Indonesia.nl</a>
+
+sessionEnded:
+  title: Silakan mulai lagi dari awal
+  content:
+    - Untuk alasan keamanan, sesi permohonan anda telah dibatalkan karena sudah tidak aktif selama 30 menit. 
+    - Mohon <a href="https://indonesia.nl">ulangi pengajuan permohonan Anda</a>.

@@ -1,0 +1,12 @@
+{% extends "kbridh-template.html" %}
+{% set hmpoPageKey = "errors.unknownError" %}
+
+{% block mainContent %}
+  {{ super() }}
+
+  <pre class="govuk-!-margin-top-8">{{ translate("govuk.statusCode") }}: {{ error.status }}</pre>
+
+  {% if showStack %}
+    <pre class="govuk-!-margin-top-8">{{ error.stack }}</pre>
+  {% endif %}
+{% endblock %}
