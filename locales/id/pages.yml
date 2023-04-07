@@ -1,0 +1,27 @@
+basicDetails:
+  title: Basic details
+
+address:
+  title: Alamat rumah di Belanda
+  content:
+    - Masukkan kode pos dan nomor rumah Anda dan kami akan mencoba menemukan alamat Anda secara otomatis.
+
+checkAddress:
+  title: Check your address
+  content:
+    - 'Based on your answers, we found the following address:'
+    - '{{ values.address.street }} {{ values.address.number }}{{ values.address.extension }}<br/>{{ values.address.postcode }} {{ values.address.city }}'
+
+checkPassport:
+  title: Check your uploaded file
+
+nikAndNkk:
+  title: Detail Nomor Induk Kependudukan dan Nomor Kartu Keluarga
+
+contactDetails:
+  title: Detail kontak Anda
+
+done:
+  title: You have completed the form
+  content:
+    - ... information on what happens next

@@ -1,0 +1,118 @@
+name:
+  label: Nama lengkap
+
+sex:
+  label: Jenis kelamin
+  items:
+    MALE:
+      label: Laki-laki
+    FEMALE:
+      label: Perempuan
+
+date-of-birth:
+  legend: Tanggal lahir
+  label: Tanggal lahir
+  hint: 'Misalnya: 17 08 1945'
+
+date-day:
+  label: Tanggal
+
+date-month:
+  label: Bulan
+
+date-year:
+  label: Tahun
+
+place-of-birth:
+  label: Tempat lahir
+
+marital-status:
+  legend: Status berkawinan
+  label: Status berkawinan
+  items:
+    SINGLE:
+      label: Belum pernah kawin
+    DIVORCED_OR_WIDOWED:
+      label: Cerai atau cerai mati
+    MARRIED:
+      label: Sudah kawin
+
+address:
+  validation:
+    notFound: Alamat dengan detail ini tidak bisa ditemukan.
+
+address-postcode:
+  label: Kode pos
+
+address-number:
+  label: Nomor rumah
+
+check-address:
+  legend: Apakah alamat ini yang benar?
+  label: Apakah alamat ini yang benar
+  items:
+    YES:
+      label: Iya, alamat ini benar
+    NO:
+      label: Tidak, saya ingin ubah alamat
+
+tni-or-polri:
+  legend: Apakah Anda berstatus Anggota TNI/POLRI?
+  label: Apakaah Anda berstatus Anggota TNI/POLRI
+  items:
+    YES:
+      label: Iya
+    NO:
+      label: Tidak
+
+ktp-usage:
+  legend: Apakah Anda sudah memiliki KTP Elektronik (KTP-El)?
+  label: Apakah Anda sudah memiliki KTP Elektronik (KTP-El)
+  items:
+    YES:
+      label: Iya, saya sudah memiliki KTP Elektronik
+    NO:
+      label: Tidak, saya belum memiliki KTP Elektronik
+
+passport-number:
+  label: Nomor paspor Anda
+
+passport:
+  label: Upload foto halaman depan passport atau Surat Perjalanan Laksana Paspor
+  hint: Anda dapat mengunggah file .png, .jpg, dan .jpeg dengan ukuran file yang tidak lebih dari 5MB.
+  validation:
+    mimetype: Anda harus melampirkan file .png, .jpg atau .jpeg
+    fileSize: Anda harus melampirkan file yang tidak lebih dari 5MB
+
+check-passport:
+  label: Apakah lampiran ini yang benar?
+  items:
+    YES:
+      label: Iya, lampiran ini yang benar
+    NO:
+      label: Tidak, saya ingin lampirkan file yang lain
+
+nik:
+  label: Nomor Induk Kependudukan (NIK)
+
+nkk:
+  label: Nomor Kartu Keluarga (NKK)
+
+disability:
+  label: Difabel
+
+voting-method:
+  label: Pilihan metode pengambilan suara
+  items:
+    TPS: 
+      label: Di Tempat Pemungutan Suara (TPS)
+    POS: 
+      label: Melalui POS
+
+email:
+  label: Alamat email Anda
+  validation:
+    email: Anda harus memasukkan alamat email yang valid
+
+tel:
+  label: Nomor telepon Anda

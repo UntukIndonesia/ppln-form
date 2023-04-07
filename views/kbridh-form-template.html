@@ -32,18 +32,20 @@
         {{ super() }}
     {% endif %}
 
-    {% call hmpoForm(ctx) %}
-        {% for fieldName in topLevelFields %}
-            {{ hmpoField(ctx, fieldName, isPageHeading) }}
-            {% set isPageHeading = false %}
-        {% endfor %}
+    {% block form %}
+        {% call hmpoForm(ctx) %}
+            {% for fieldName in topLevelFields %}
+                {{ hmpoField(ctx, fieldName, isPageHeading) }}
+                {% set isPageHeading = false %}
+            {% endfor %}
 
-        {% block innerContent %}
-        {% endblock %}
+            {% block innerContent %}
+            {% endblock %}
 
-        {% block submitButton %}
-            {{ hmpoSubmit(ctx) }}
-        {% endblock %}
-    {% endcall %}
+            {% block submitButton %}
+                {{ hmpoSubmit(ctx) }}
+            {% endblock %}
+        {% endcall %}
+    {% endblock %}
 
 {% endblock %}

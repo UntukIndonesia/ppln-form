@@ -28,5 +28,10 @@ module.exports = {
         name: 'kbridh-lang',
       },
     },
+    addressLookup: {
+      url: process.env.POSTCODE_API_URL,
+      apiKey: process.env.POSTCODE_API_KEY,
+      concatenateExtension: true,
+    },
   },
 };

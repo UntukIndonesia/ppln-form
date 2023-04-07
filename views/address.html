@@ -1,0 +1,31 @@
+{% from "hmpo-form/macro.njk" import hmpoForm %}
+{% from "hmpo-submit/macro.njk" import hmpoSubmit %}
+{% from "hmpo-text/macro.njk" import hmpoText %}
+{% extends "kbridh-template.html" %}
+
+{% block content %}
+  {{ super() }}
+
+  {% call hmpoForm(ctx) %}
+    {{ hmpoText(ctx, {
+      id: "address-postcode",
+      label: {
+          classes: "govuk-label--m"
+      },
+      classes: "govuk-input--width-5"
+    }) }}
+
+    {{ hmpoText(ctx, {
+      id: "address-number",
+      label: {
+          classes: "govuk-label--m"
+      },
+      classes: "govuk-input--width-5"
+    }) }}
+
+    {% block submitButton %}
+        {{ hmpoSubmit(ctx) }}
+    {% endblock %}
+  {% endcall %}
+
+{% endblock %}

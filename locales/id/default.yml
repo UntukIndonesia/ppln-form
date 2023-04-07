@@ -9,6 +9,10 @@ govuk:
   skipLink: Langsung ke konten utama
   statusCode: Kode status
   cookieBanner: Layanan ini mengunakan cookies untuk berfungsi
+serviceNames:
+  ppln-form: Pembaharuan Data Pemilu 2024
 kbridh:
   embassy: Kedutaan Besar Republik Indonesia
   embassyLocation: Den Haag, Belanda
+validation:
+  default: Anda harus memasukkan {{ label }}

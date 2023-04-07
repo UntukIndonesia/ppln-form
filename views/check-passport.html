@@ -1,0 +1,8 @@
+{% extends "kbridh-form-template.html" %}
+
+{% block form %}
+  <img src="/linked-file/{{ values.passport }}" class="govuk-!-width-one-half govuk-!-margin-bottom-6" alt="">
+
+  {{ super() }}
+{% endblock %}
+
