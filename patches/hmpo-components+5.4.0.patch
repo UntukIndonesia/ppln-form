@@ -1,0 +1,13 @@
+diff --git a/node_modules/hmpo-components/lib/globals.js b/node_modules/hmpo-components/lib/globals.js
+index 62a6d15..5a9d488 100644
+--- a/node_modules/hmpo-components/lib/globals.js
++++ b/node_modules/hmpo-components/lib/globals.js
+@@ -148,7 +148,7 @@ let globals = {
+     hmpoGetOptions(ctx, params, type, optional = false) {
+         let translate = ctx('translate');
+         let options = {};
+-        if (typeof params[type] === 'string') {
++        if (typeof params[type] === 'string' && params[type].length) {
+             options = {
+                 text: params[type]
+             };
