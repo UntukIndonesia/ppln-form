@@ -34,10 +34,6 @@
 {% endblock %}
 
 {% block beforeContent %}
-    {% block languageSwitcher %}
-        {% include "includes/language-switcher.html" %}
-    {% endblock %}
-
     {% block backLink %}
         {% if backLink %}
             {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
