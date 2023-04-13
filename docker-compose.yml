@@ -14,5 +14,10 @@ services:
     - REDIS_HOSTS=local:redis:6379
     ports:
     - "8081:8081"
+  mailcatcher:
+    image: dockage/mailcatcher:0.8.2
+    ports:
+      - "1080:1080"
+      - "1025:1025"
 volumes:
   ppln-form-redis:
