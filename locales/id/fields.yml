@@ -100,6 +100,21 @@ nkk:
 
 disability:
   label: Difabel
+  items:
+    NO_DISABILITY:
+      label: Tidak memiliki kebutuhan khusus
+    PHYSICAL_DISABILITY:
+      label: Disabilitas Fisik
+    HEARING_DISABILITY:
+      label: Disabilitas Intelektual
+    VISUAL_DISABILITY:
+      label: Disabilitas Visual
+    MENTAL_DISABILITY:
+      label: Disabilitas Mental
+    OTHER_DISABILITY:
+      label: Lainnya
+    NOT_DISCLOSED:
+      label: Tidak ingin mengungkapkan
 
 voting-method:
   label: Pilihan metode pengambilan suara
