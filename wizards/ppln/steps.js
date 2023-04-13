@@ -9,7 +9,12 @@ module.exports = {
     entryPoint: true,
     skip: true,
     resetJourney: true,
+    next: 'start',
+  },
+  '/start': {
+    template: 'kbridh-form-template.html',
     next: 'basic-details',
+    start: true,
   },
   '/basic-details': {
     fields: ['name', 'sex'],

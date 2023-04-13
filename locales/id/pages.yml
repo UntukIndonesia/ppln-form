@@ -1,3 +1,22 @@
+start:
+  title: Formulir Tanggapan dan Masukan DPSLN Den Haag untuk Pemilu 2024
+  content:
+    - Halaman ini merupakan halaman tanggapan dan/atau masukan terhadap DPSLN Den Haag untuk Pemilu 2024
+    - '## DPSLN Den Haag'
+    - Anda dapat mengecek Daftar Pemilih Sementara Luar Negeri di wilayah kerja PPLN Den Haag melalui beberapa kanal
+    - '<ol class="govuk-list govuk-list--number"><li>Daftar Cetak di Kantor KBRI Den Haag</li>
+      <li>Pengecekan online di <a href="https://pplndenhaag.indonesia.nl/DashboardPPLN.php">http://pplndenhaag.indonesia.nl/DashboardPPLN.php</a></li>
+      </ol>'
+    - '## Tanggapan dan Masukan terhadap DPSLN Den Haag'
+    - Tanggapan dan Masukan dapat dilakukan untuk
+    - '<ol class="govuk-list govuk-list--number">
+      <li>Memperbaiki data pemilih yang keliru</li>
+      <li>mengubah metode pemilihan (TPSLN/POS)</li>
+      <li>Menghapus dari data pemilihan</li>
+      </ol>'
+    - Silahkan klik tombol di bawah ini untuk mengisi formulir Tanggapan dan Permohonan terhadap DPSLN
+
+
 basicDetails:
   title: Basic details
 

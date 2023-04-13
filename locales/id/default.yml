@@ -1,5 +1,6 @@
 buttons:
   next: Lanjut
+  start: Mulai
 govuk:
   serviceName: Service name
   backLink: Kembali

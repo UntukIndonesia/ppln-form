@@ -43,7 +43,10 @@
             {% endblock %}
 
             {% block submitButton %}
-                {{ hmpoSubmit(ctx) }}
+                {{ hmpoSubmit(ctx, {
+                    isStartButton: true if options.start,
+                    html: ctx('translate')('buttons.start') if options.start
+                }) }}
             {% endblock %}
         {% endcall %}
     {% endblock %}
