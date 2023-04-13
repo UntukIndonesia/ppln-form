@@ -22,6 +22,7 @@ contactDetails:
   title: Detail kontak Anda
 
 done:
-  title: You have completed the form
+  title: Anda telah menyelesaikan formulir online
   content:
-    - ... information on what happens next
+    - Terima kasih telah memberikan tanggapan dan masukan terhadap DPSLN Den Haag.
+    - 'Apabila ada pertanyaan dapat diajukan melalui email: <a href="mailto:pplndenhaag@indonesia.nl">pplndenhaag@indonesia.nl</a>'
