@@ -1,0 +1,24 @@
+{% extends "kbridh-email.njk" %}
+{% from "kbridh-email-paragraph/macro.njk" import kbridhEmailParagraph %}
+
+{% block pageStart %}
+  {% call kbridhEmailParagraph() %}
+    Yth. Bapak/Ibu,
+  {% endcall %}
+{% endblock %}
+
+{% block mainContent %}
+  {% call kbridhEmailParagraph() %}
+    Anda telah mengisi formulir online untuk tanggapan dan masukan terhadap DPSLN Den Haag. Anda dapat menemukan salinan formulir yang terlampir dalam surat elektronik ini.
+    Data anda akan kami proses dan setelah selesai akan dikirimkan salinan digital Formulir Tanggapan dan Masukan Masyarakat terhadap DPS.
+  {% endcall %}
+  {% call kbridhEmailParagraph() %}
+    Terima kasih atas partisipasi Bapak/Ibu dalam masa tanggapan dan masukan DPSLN.
+  {% endcall %}
+{% endblock %}
+
+{% block signee %}
+  <p style="font-family: Helvetica, Arial, sans-serif; font-weight: 700; font-size: 19px; line-height: 1.315789474; margin: 38px 0 38px 0;">
+    Panitia Pemilihan Luar Negeri Den Haag
+  </p>
+{% endblock %}

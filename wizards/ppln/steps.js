@@ -3,6 +3,7 @@ const dateMixin = require('hmpo-components').mixins.Date;
 const addressLookupMixin = require('@form-wizard-framework/address-lookup/lib/nl/postcode-api/mixin');
 const { config } = require('@kbridenhaag/kbridh-app');
 const fileUploadMixin = require('../../lib/mixins/file-upload');
+const sendConfirmationMixin = require('../../lib/mixins/send-confirmation');
 
 module.exports = {
   '/': {
@@ -116,6 +117,11 @@ module.exports = {
   '/submit': {
     skip: true,
     next: 'done',
+    controller: sendConfirmationMixin(BaseController),
+    emailer: {
+      ...config.get('emailer'),
+      template: 'confirmation-email.html',
+    },
   },
   '/done': {
     backLink: null,

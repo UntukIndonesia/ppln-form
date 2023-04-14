@@ -1,4 +1,5 @@
 const dotenv = require('dotenv');
+const path = require('path');
 
 dotenv.config();
 
@@ -21,7 +22,10 @@ module.exports = {
     redis: {
       connectionString: process.env.REDIS_TLS_URL || process.env.REDIS_URL,
     },
-    views: ['views'],
+    views: [
+      path.resolve(path.dirname(require.resolve('@kbridenhaag/kbridh-emails')), 'components'),
+      'views',
+    ],
     translation: {
       fallbackLang: ['id'],
       cookie: {
@@ -32,6 +36,19 @@ module.exports = {
       url: process.env.POSTCODE_API_URL,
       apiKey: process.env.POSTCODE_API_KEY,
       concatenateExtension: true,
+    },
+    emailer: {
+      from: 'no-reply@indonesia.nl',
+      transport: 'smtp',
+      transportOptions: {
+        host: process.env.SMTP_HOST,
+        port: process.env.SMTP_PORT,
+        secure: process.env.SMTP_SECURE === 'true',
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS,
+        },
+      },
     },
   },
 };
