@@ -56,7 +56,7 @@ module.exports = {
       },
       {
         fn: fileSize,
-        arguments: 5248800,
+        arguments: 11534336,
       },
     ],
   },

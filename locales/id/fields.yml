@@ -79,10 +79,10 @@ passport-number:
 
 passport:
   label: Upload foto halaman depan passport atau Surat Perjalanan Laksana Paspor
-  hint: Anda dapat mengunggah file .png, .jpg, dan .jpeg dengan ukuran file yang tidak lebih dari 5MB.
+  hint: Anda dapat mengunggah file .png, .jpg, dan .jpeg dengan ukuran file yang tidak lebih dari 10MB.
   validation:
     mimetype: Anda harus melampirkan file .png, .jpg atau .jpeg
-    fileSize: Anda harus melampirkan file yang tidak lebih dari 5MB
+    fileSize: Anda harus melampirkan file yang tidak lebih dari 10MB
 
 check-passport:
   label: Apakah lampiran ini yang benar?
