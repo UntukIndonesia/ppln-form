@@ -7,7 +7,7 @@ module.exports = {
   options: {
     port: process.env.PORT || 3000,
     logs: {
-      console: true,
+      console: false,
       consoleJSON: process.env.NODE_ENV === 'production',
       consoleColor: process.env.NODE_ENV !== 'production',
       consoleLevel: process.env.NODE_ENV === 'production' ? 'info' : 'debug',

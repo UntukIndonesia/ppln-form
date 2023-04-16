@@ -4,6 +4,7 @@ const addressLookupMixin = require('@form-wizard-framework/address-lookup/lib/nl
 const { config } = require('@kbridenhaag/kbridh-app');
 const fileUploadMixin = require('../../lib/mixins/file-upload');
 const sendConfirmationMixin = require('../../lib/mixins/send-confirmation');
+const checkPassportUploadedMixin = require('../../lib/mixins/check-passport-uploaded');
 
 module.exports = {
   '/': {
@@ -60,17 +61,11 @@ module.exports = {
   '/passport-details': {
     fields: ['passport-number'],
     template: 'kbridh-form-template.html',
-    next: [
-      {
-        fn: (req) => !!req.sessionModel.get('passport'),
-        next: 'check-passport',
-      },
-      'upload-passport',
-    ],
+    next: 'upload-passport',
   },
   '/upload-passport': {
     fields: ['passport'],
-    controller: fileUploadMixin(BaseController),
+    controller: fileUploadMixin(checkPassportUploadedMixin(BaseController)),
     fileUpload: {
       fileUpload: {
         limit: '15mb',
@@ -79,17 +74,14 @@ module.exports = {
     next: 'check-passport',
   },
   '/check-passport': {
-    backLink: 'passport-details',
+    backLink: '/upload-passport?backlink=true',
     fields: ['check-passport'],
     template: 'check-passport.html',
     next: [
       {
         field: 'check-passport',
         value: 'NO',
-        next: (req) => {
-          req.sessionModel.unset('passport');
-          return 'upload-passport';
-        },
+        next: 'upload-passport?unset=true',
       },
       'nik-and-nkk',
     ],
