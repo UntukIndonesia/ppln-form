@@ -61,5 +61,10 @@ module.exports = {
         secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
       },
     },
+    sheetId: process.env.SHEET_ID,
+    serviceAccount: {
+      email: process.env.SERVICE_ACCOUNT_EMAIL,
+      privateKey: process.env.SERVICE_ACCOUNT_PRIVATE_KEY,
+    },
   },
 };

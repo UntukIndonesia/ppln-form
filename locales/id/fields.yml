@@ -65,7 +65,7 @@ tni-or-polri:
     NO:
       label: Tidak
 
-ktp-usage:
+e-ktp-usage:
   legend: Apakah Anda sudah memiliki KTP Elektronik (KTP-El)?
   label: Apakah Anda sudah memiliki KTP Elektronik (KTP-El)
   items:

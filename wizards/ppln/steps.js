@@ -4,6 +4,7 @@ const addressLookupMixin = require('@form-wizard-framework/address-lookup/lib/nl
 const { config } = require('@kbridenhaag/kbridh-app');
 const fileUploadMixin = require('../../lib/mixins/file-upload');
 const sendConfirmationMixin = require('../../lib/mixins/send-confirmation');
+const submitMixin = require('../../lib/mixins/submit');
 const checkPassportUploadedMixin = require('../../lib/mixins/check-passport-uploaded');
 const s3UploadMixin = require('../../lib/mixins/s3-upload');
 
@@ -52,10 +53,10 @@ module.exports = {
   '/tni-or-polri': {
     fields: ['tni-or-polri'],
     template: 'kbridh-form-template.html',
-    next: 'ktp-usage',
+    next: 'e-ktp-usage',
   },
-  '/ktp-usage': {
-    fields: ['ktp-usage'],
+  '/e-ktp-usage': {
+    fields: ['e-ktp-usage'],
     template: 'kbridh-form-template.html',
     next: 'passport-details',
   },
@@ -116,7 +117,7 @@ module.exports = {
   '/submit': {
     skip: true,
     next: 'done',
-    controller: sendConfirmationMixin(BaseController),
+    controller: sendConfirmationMixin(submitMixin(BaseController)),
     emailer: {
       ...config.get('emailer'),
       template: 'confirmation-email.html',

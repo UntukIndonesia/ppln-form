@@ -83,7 +83,7 @@ module.exports = {
       'NOT_DISCLOSED',
     ],
   },
-  'ktp-usage': {
+  'e-ktp-usage': {
     type: 'radios',
     validate: ['required'],
     options: ['YES', 'NO'],
