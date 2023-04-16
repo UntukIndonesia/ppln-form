@@ -1,0 +1,31 @@
+diff --git a/node_modules/@form-wizard-framework/address-lookup/lib/nl/postcode-api/mixin.js b/node_modules/@form-wizard-framework/address-lookup/lib/nl/postcode-api/mixin.js
+index 2754a31..636bf83 100644
+--- a/node_modules/@form-wizard-framework/address-lookup/lib/nl/postcode-api/mixin.js
++++ b/node_modules/@form-wizard-framework/address-lookup/lib/nl/postcode-api/mixin.js
+@@ -138,6 +138,7 @@ module.exports = (Controller) =>
+       _.forEach(req.form.options.addressFields, (fieldName) =>
+         this.processAddressField(req, fieldName)
+       );
++
+       super.process(req, res, next);
+     }
+ 
+@@ -158,15 +159,11 @@ module.exports = (Controller) =>
+           );
+           body[partFieldName] = number;
+ 
+-          if (!_.isEmpty(extension)) {
+-            const extensionKey = fieldName + '-' + EXTENSION_PART_KEY;
+-            body[extensionKey] = extension;
+-          }
++          const extensionKey = fieldName + '-' + EXTENSION_PART_KEY;
++          body[extensionKey] = extension || '';
+         }
+ 
+-        if (body[partFieldName]) {
+-          body[fieldName][part] = body[partFieldName];
+-        }
++        body[fieldName][part] = body[partFieldName];
+       });
+     }
+ 
