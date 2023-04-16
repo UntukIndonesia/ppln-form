@@ -7,7 +7,7 @@ module.exports = {
   options: {
     port: process.env.PORT || 3000,
     logs: {
-      console: false,
+      console: true,
       consoleJSON: process.env.NODE_ENV === 'production',
       consoleColor: process.env.NODE_ENV !== 'production',
       consoleLevel: process.env.NODE_ENV === 'production' ? 'info' : 'debug',
@@ -23,7 +23,10 @@ module.exports = {
       connectionString: process.env.REDIS_TLS_URL || process.env.REDIS_URL,
     },
     views: [
-      path.resolve(path.dirname(require.resolve('@kbridenhaag/kbridh-emails')), 'components'),
+      path.resolve(
+        path.dirname(require.resolve('@kbridenhaag/kbridh-emails')),
+        'components'
+      ),
       'views',
     ],
     translation: {
@@ -48,6 +51,14 @@ module.exports = {
           user: process.env.SMTP_USER,
           pass: process.env.SMTP_PASS,
         },
+      },
+    },
+    s3: {
+      region: process.env.S3_REGION,
+      bucket: process.env.S3_BUCKET,
+      credentials: {
+        accessKeyId: process.env.S3_ACCESS_KEY_ID,
+        secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
       },
     },
   },

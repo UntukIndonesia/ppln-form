@@ -19,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.312.0",
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@form-wizard-framework/address-lookup": "^1.0.0",

@@ -5,6 +5,7 @@ const { config } = require('@kbridenhaag/kbridh-app');
 const fileUploadMixin = require('../../lib/mixins/file-upload');
 const sendConfirmationMixin = require('../../lib/mixins/send-confirmation');
 const checkPassportUploadedMixin = require('../../lib/mixins/check-passport-uploaded');
+const s3UploadMixin = require('../../lib/mixins/s3-upload');
 
 module.exports = {
   '/': {
@@ -104,6 +105,12 @@ module.exports = {
   '/contact-details': {
     fields: ['email', 'tel'],
     template: 'kbridh-form-template.html',
+    next: 'upload-passport-s3',
+  },
+  '/upload-passport-s3': {
+    skip: true,
+    controller: s3UploadMixin(BaseController),
+    uploadKey: 'passport',
     next: 'submit',
   },
   '/submit': {
