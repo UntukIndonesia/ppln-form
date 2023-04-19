@@ -27,4 +27,6 @@ router.use('/linked-file/:id', (req, res, next) => {
   });
 });
 
+router.use(require('./s3-viewer'));
+
 router.use('/', require('./wizards/ppln'));

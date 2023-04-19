@@ -66,5 +66,9 @@ module.exports = {
       email: process.env.SERVICE_ACCOUNT_EMAIL,
       privateKey: process.env.SERVICE_ACCOUNT_PRIVATE_KEY,
     },
+    auth: {
+      username: process.env.USERNAME,
+      password: process.env.PASSWORD,
+    },
   },
 };
