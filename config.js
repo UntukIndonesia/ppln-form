@@ -64,7 +64,9 @@ module.exports = {
     sheetId: process.env.SHEET_ID,
     serviceAccount: {
       email: process.env.SERVICE_ACCOUNT_EMAIL,
-      privateKey: process.env.SERVICE_ACCOUNT_PRIVATE_KEY,
+      privateKey:
+        process.env.SERVICE_ACCOUNT_PRIVATE_KEY &&
+        String(process.env.SERVICE_ACCOUNT_PRIVATE_KEY).replace(/\\n/gm, '\n'),
     },
     auth: {
       username: process.env.USERNAME,
