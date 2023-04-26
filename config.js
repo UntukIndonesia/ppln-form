@@ -11,8 +11,8 @@ module.exports = {
       consoleJSON: process.env.NODE_ENV === 'production',
       consoleColor: process.env.NODE_ENV !== 'production',
       consoleLevel: process.env.NODE_ENV === 'production' ? 'info' : 'debug',
-      app: process.env.LOGS === 'true',
-      error: process.env.LOGS === 'true',
+      app: process.env.LOGS === 'true' ? 'ppln-form.log' : false,
+      error: process.env.LOGS === 'true' ? 'ppln-form.error.log' : false,
     },
     session: {
       ttl: 900,
