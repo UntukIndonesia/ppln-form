@@ -1,24 +1,25 @@
 start:
   title: Formulir Tanggapan dan Masukan DPSLN Den Haag untuk Pemilu 2024
   content:
-    - Halaman ini merupakan halaman tanggapan dan/atau masukan terhadap DPSLN Den Haag untuk Pemilu 2024
-    - '## DPSLN Den Haag'
-    - Anda dapat mengecek Daftar Pemilih Sementara Luar Negeri di wilayah kerja PPLN Den Haag melalui beberapa kanal
+    - Halaman ini merupakan halaman tanggapan dan/atau masukan terhadap DPSHPLN Den Haag untuk Pemilu 2024
+    - '## DPSHPLN Den Haag'
+    - Anda dapat mengecek Daftar Pemilih Sementara Hasil Perbaikan Luar Negeri di wilayah kerja PPLN Den Haag melalui beberapa kanal
     - '<ol class="govuk-list govuk-list--number"><li>Daftar Cetak di Kantor KBRI Den Haag</li>
-      <li>Pengecekan online di <a href="https://pplndenhaag.indonesia.nl/DashboardPPLN.php">http://pplndenhaag.indonesia.nl/DashboardPPLN.php</a></li>
+      <li>Pengecekan online di <a href="https://pplndenhaag.indonesia.nl/DashboardPPLN.php">https://pplndenhaag.indonesia.nl/DashboardPPLN.php</a></li>
+      <li>Pengecekan online di <a href="https://cekdptonline.kpu.go.id">https://cekdptonline.kpu.go.id</a></li>
       </ol>'
-    - '## Tanggapan dan Masukan terhadap DPSLN Den Haag'
+    - '## Tanggapan dan Masukan terhadap DPSHPLN Den Haag'
     - Tanggapan dan Masukan dapat dilakukan untuk
     - '<ol class="govuk-list govuk-list--number">
       <li>Memperbaiki data pemilih yang keliru</li>
-      <li>mengubah metode pemilihan (TPSLN/POS)</li>
+      <li>Mengubah metode pemilihan (TPSLN/POS)</li>
       <li>Menghapus dari data pemilihan</li>
+      <li>Menambah pemilih baru</a>
       </ol>'
-    - Silahkan klik tombol di bawah ini untuk mengisi formulir Tanggapan dan Permohonan terhadap DPSLN
-
+    - Silahkan klik tombol di bawah ini untuk mengisi formulir Tanggapan dan Permohonan terhadap Data Pemilih Den Haag untuk pemilu 2024
 
 basicDetails:
-  title: Basic details
+  title: Nama dan jenis kelamin
 
 address:
   title: Alamat rumah di Belanda
@@ -26,13 +27,13 @@ address:
     - Masukkan kode pos dan nomor rumah Anda dan kami akan mencoba menemukan alamat Anda secara otomatis.
 
 checkAddress:
-  title: Check your address
+  title: Periksa alamat Anda
   content:
-    - 'Based on your answers, we found the following address:'
+    - 'Berdasarkan jawaban Anda, kami menemukan alamat berikut:'
     - '{{ values.address.street }} {{ values.address.number }}{{ values.address.extension }}<br/>{{ values.address.postcode }} {{ values.address.city }}'
 
 checkPassport:
-  title: Check your uploaded file
+  title: Periksa file yang Anda unggah
 
 nikAndNkk:
   title: Detail Nomor Induk Kependudukan dan Nomor Kartu Keluarga
